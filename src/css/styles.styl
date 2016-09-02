@@ -2,13 +2,13 @@
 
 json('../../public/config.json')
 
-$blue = #2800D7
+ajam_blue = #2677B9
 max_width = 1024px
 transition_opts = transitionDuration linear
-header_height = 95px
+header_height = 46px
 header_item_height = 28px
-header_padding = 0
-header_margin = 2px
+header_padding = 7px
+header_margin = 0px
 	
 drawer_width = 66%
 drawer_transition_opts = drawerTransitionDuration cubic-bezier(0,0,.2,1)
@@ -21,7 +21,7 @@ the_beige = #f3f0df
 bg_gray = #34393A
 
 header_item_color = #000
-header_item_hover_color = $blue
+header_item_hover_color = ajam_blue
 header_item_active_color = #33AE05
 header_item_bg_hover_color = #000
 
@@ -34,19 +34,6 @@ mobile_query_width = 775px
 
 mobile_query = "(max-width: " + mobile_query_width + ")"
 
-/* BB-specific */
-
-.header-item[data-which="page-number"]
-	margin-right 10px
-.header-group
-	position relative
-	z-index 2147483647
-.header-group .header-item-container
-	padding 0 !important
-.header-btn
-	min-width 0 !important
-	width 50px !important	
-
 /* G L O B A L S */
 *
 	box-sizing border-box
@@ -55,28 +42,18 @@ html, body
 	height 100%
 html
 	font-size 16px
-#header > div
-	margin 0
-#header > ul,
-#btns,
-#pages-wrapper
-	font 62.5% BWHaasText, sans-serif
 body
+	font 62.5% Helvetica, sans-serif
 	margin 0
 	background-color bg_layout_color
-.bb-nav-root
-	font-size auto !important
 a
-	color $blue
+	color ajam_blue
 	text-decoration none
 a:hover
 	text-decoration underline
 /* needed to center contents in IE */
 html:-ms-fullscreen
 	width 100% 
-	
-.bb-nav-logo__rubix::before
-	top -2px !important
 
 #main-content-wrapper
 	width 100%
@@ -106,14 +83,13 @@ body[data-state="hotspot"]
 #header
 	width 100%
 	background-color bg_layout_color
-	padding header_padding 0
+	padding header_padding 5px header_padding 5px
 	margin-bottom header_margin
 	margin-left auto
 	margin-right auto
 	opacity 1
 	transition opacity 100ms linear
 	height header_height - header_padding
-	z-index 999999999999
 	// max-width max_width*2 + gutterWidth
 html:-moz-full-screen
 	#header
@@ -203,7 +179,7 @@ html:-ms-fullscreen
 a .header-btn-icon
 	color #000
 a .header-btn-icon:hover
-	color $blue
+	color ajam_blue
 
 
 .header-group
@@ -223,7 +199,7 @@ a .header-btn-icon:hover
 		text-align right
 
 .internal-link
-	color $blue
+	color ajam_blue
 .internal-link:hover
 	text-decoration underline
 	cursor pointer
@@ -261,7 +237,7 @@ input[type="number"]
 		text-decoration none
 	li:hover
 		cursor pointer
-		background-color $blue
+		background-color ajam_blue
 
 .drawer-section-container[data-section="downloads"]
 	line-height 1.7em
@@ -349,7 +325,7 @@ input[type="number"]
 .tooltipped-i:after,
 .tooltipped:after
 	z-index 9997
-	transform translateX(15%)
+	transform translateX(50%)
 	margin-top 5px
 	top 100%
 	padding 5px 8px
@@ -444,44 +420,37 @@ nav_helper_right = 80px
 .nav-helpers
 	position absolute
 	top 43.5%
-	right (nav_helper_right * 1.5)px
-	width 80px
+	right nav_helper_right
+	width 90%
 	text-align center
 	font-size 1.4em
 	font-weight 200
-	font-family HaasText, sans-serif
+	font-family Helvetica, sans-serif
 	line-height 15px
-	color #000
+	color #969696
 	animation bounce-left-right 2.75s infinite
-.nav-helpers-child > span
-	border 1px solid #000
-	display inline-block
-	vertical-align top
-	margin-bottom 1px
-	background-color #fff
-	padding 1px 5px 0px 5px
-	color #000
+	opacity .75
 .nav-helper-arrows
 	font-size 1.4em
 	white-space nowrap
 	margin 9px 0 10px 0
-	font-family HaasText, sans-serif
+	font-family Helvetica
 	color #000
 	span
 		padding 1px 4px
-		border 1px solid #000
+		border 1px solid #ccc
 		background linear-gradient(180deg, #FFF 0%, #E3E3E3 100%) repeat scroll 0% 0% #FFF
 	span:first-child
 		margin-right 2px
 @keyframes bounce-left-right {
 	0%{
-		transform translateX(nav_helper_right)
+		right nav_helper_right
 	}
 	50%{
-		transform translateX((nav_helper_right - (nav_helper_right/2))px)
+		right nav_helper_right - (nav_helper_right/5)
 	}
 	100%{
-		transform translateX(nav_helper_right)
+		right nav_helper_right
 	}
 }
 
@@ -659,7 +628,6 @@ buffer_for_tooltip = 11px
 	text-align center
 #pages-wrapper
 	height "calc(100% - %s)" % (header_height)
-	z-index -1
 #pages
 	height 100%
 body[data-state="page-change"]
@@ -996,7 +964,7 @@ body[data-format="mobile"]
 	#side-drawer-handle,#desktop-drawer-container
 		top mobile_header_height
 	#header
-		// padding 3px
+		padding 3px
 		margin-bottom 8px
 		height mobile_header_height
 	#btns

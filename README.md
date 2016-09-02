@@ -1,21 +1,26 @@
 Pulp
 ===
 
-An open-source viewer for displaying comics online, developed for the  story [Terms of Service](http://projects.aljazeera.com/2014/terms-of-service). Layout your pages with [Pulp press](https://github.com/ajam/pulp-press) and place the resulting the `pages.json` file the `data/` folder. For more detailed instructions. Read below.
+An open-source viewer for displaying comics online, developed for the story [Terms of Service](http://projects.aljazeera.com/2014/terms-of-service). Pulp was forked into this repo, Pulp2, to continue development and support after the closure of Al Jazeera America.
 
-#### [Live demo](http://ajam.github.io/pulp)
+Layout your pages with [Pulp press](https://github.com/ajam/pulp-press) and place the resulting the `pages.json` file the `data/` folder. For more detailed instructions, read below.
+
+#### Provenance
+
+
+#### [Live demo](http://mhkeller.github.io/pulp2)
 
 #### Double view
-![](https://raw.githubusercontent.com/ajam/pulp/gh-pages/demo-assets/double-view.gif)
+![](https://raw.githubusercontent.com/mhkeller/pulp2/gh-pages/demo-assets/double-view.gif)
 
 #### Single view
-![](https://raw.githubusercontent.com/ajam/pulp/gh-pages/demo-assets/single-view.gif)
+![](https://raw.githubusercontent.com/mhkeller/pulp2/gh-pages/demo-assets/single-view.gif)
 
 #### Mobile view (panel by panel swiping, tap to zoom)
-![](https://raw.githubusercontent.com/ajam/pulp/gh-pages/demo-assets/mobile-view-simulator.gif)
+![](https://raw.githubusercontent.com/mhkeller/pulp2/gh-pages/demo-assets/mobile-view-simulator.gif)
 
 #### Mobile drawer
-![](https://raw.githubusercontent.com/ajam/pulp/gh-pages/demo-assets/drawer.gif)
+![](https://raw.githubusercontent.com/mhkeller/pulp2/gh-pages/demo-assets/drawer.gif)
 
 ### Requirements / assumptions
 
