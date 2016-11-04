@@ -5,9 +5,6 @@ An open-source viewer for displaying comics online, developed for the story [Ter
 
 Layout your pages with [Pulp press](https://github.com/ajam/pulp-press) and place the resulting the `pages.json` file the `data/` folder. For more detailed instructions, read below.
 
-#### Provenance
-
-
 #### [Live demo](http://mhkeller.github.io/pulp2)
 
 #### Double view
@@ -140,6 +137,7 @@ Pulp can handle a variety of image formats. Here's [one thread](https://github.c
 * BBC — [Hooked](http://www.bbc.com/news/magazine-32740691)
 * [Camille Bissuel](http://twitter.com/nylnook) — [Climate Change explained to Frogs, to Toads, to Batrachians Generally, and All Earthlings Who Might Feel a Little Concerned](http://nylnook.com/comics/climate-frogs)
 * Al Jazeera America — [Fare Game](http://projects.aljazeera.com/2015/12/fare-game)
+* Finnish Public Broadcaster Yle — ["Pakasteet pieneen pussiin?" - kielen alkeita sarjakuvan avulla](http://yle.fi/aihe/artikkeli/2016/10/25/pakasteet-pieneen-pussiin-kielen-alkeita-sarjakuvan-avulla), an amazing tri-lingual comic with audio to help people learn languages.
 
 ## Customizing
 
