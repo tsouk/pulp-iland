@@ -5,7 +5,8 @@
   "main": "index.html",
   "scripts": {
     "build": "gulp",
-    "dev": "gulp watch-files"
+    "dev": "gulp watch-files",
+    "test": "standard --fix src/js/main.js"
   },
   "repository": {
     "type": "git",
@@ -33,5 +34,7 @@
     "minimist": "^1.2.0",
     "nib": "^1.1.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "standard": "^9.0.1"
+  }
 }
