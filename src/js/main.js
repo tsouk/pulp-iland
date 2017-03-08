@@ -1,3 +1,4 @@
+/* globals $ _ Backbone alert FastClick ScrollFix Scale Element */
 (function () {
   'use strict'
 
@@ -23,9 +24,9 @@
       windowWidth = windowWidth || $(window).width()
       var format
 
-      var dynamic_page_width = parseInt($('.page-container.viewing img').css('width')) || parseInt($('.page-container img').css('width')),
-        static_page_width = this.get('single-page-width'),
-        page_limit = settings.singlePageWidthLimit
+      var dynamic_page_width = parseInt($('.page-container.viewing img').css('width')) || parseInt($('.page-container img').css('width'))
+      // var static_page_width = this.get('single-page-width')
+      var page_limit = settings.singlePageWidthLimit
 
       // console.log(windowWidth, dynamic_page_width, dynamic_page_width*2 + settings.gutterWidth)
       // console.log(windowWidth > dynamic_page_width*2 + settings.gutterWidth)
@@ -68,7 +69,8 @@
 
   var helpers = {
     setTransitionCss: function (property, value, transitionDuration) {
-      var css = {}, duration = 0
+      var css = {}
+      // var duration = 0
       css[property] = value
       css = helpers.addDuration(css, transitionDuration)
       return css
@@ -114,13 +116,11 @@
         // Left arrow
         if (code == 37 || code == 'swiperight') {
           direction = 'prev'
-        }
-        // Right arrow
-        else if (code == 39 || code == 'swipeleft') {
+        } else if (code == 39 || code == 'swipeleft') {
+          // Right arrow
           direction = 'next'
-        }
-        // Esc, up, down arrows
-        else if (code == 27 || code == 38 || code == 40) {
+        } else if (code == 27 || code == 38 || code == 40) {
+          // Esc, up, down arrows
           direction = false
         }
 
@@ -316,8 +316,8 @@
         var $pageContainer,
           current_id
 
-        var formatState = state.get('format'),
-          bookend = formatState.bookend
+        // var formatState = state.get('format')
+        // bookend = formatState.bookend
         // Clear all hotspot info since we're in double mode
         states.hotspot = ''
         states.lastHotspot = ''
@@ -509,15 +509,14 @@
       }
     },
     fullScreenChange: function () {
-      var mode
+      // var mode
       // You could use this function to listen for fullscreen event changes for analytics
       // Exiting
       if ((document.fullScreenElement && document.fullScreenElement !== null) || (!document.mozFullScreen && !document.webkitIsFullScreen)) {
-        mode = 'exit'
-      }
-      // Entering
-      else {
-        mode = 'enter'
+        // mode = 'exit'
+      } else {
+        // Entering
+        // mode = 'enter'
       }
     },
     bakePubDate: function () {
@@ -570,7 +569,7 @@
         }
       })
       $('.tooltipped-i input').on('blur', function () {
-        var that = this
+        // var that = this
         layout.goToPage.deny()
       })
 
@@ -1107,21 +1106,21 @@
       fromHotspotClick: function ($hotspot) {
         // Only do this on mobile, this check is sometimes redundant since the btn overlay prevents this in `mobile-only` `panelZoomMode`
         if (state.get('format').format == 'mobile') {
-          var page_hotspot = $hotspot.attr('data-hotspot-id').split('-'), // `1-1` -> ["1", "1"];
-            page = page_hotspot[0],
-            hotspot = page_hotspot[1],
-            hash = '',
-            direction = ''
+          var page_hotspot = $hotspot.attr('data-hotspot-id').split('-') // `1-1` -> ["1", "1"];
+          var page = page_hotspot[0]
+          var hotspot = page_hotspot[1]
+          var hash = ''
+          // var direction = ''
 
           // If you've tapped on the active hotspot...
           if (states.currentPage == page && states.currentHotspot == hotspot) {
             states.lastHotspot = hotspot // Record the last hotspot you were on. You can then pick up from here on swipe.
             states.currentHotspot = hotspot = '' // Set the current hotspot and hotspot variable to nothing to signify that you're on a page view
             hash = page // And in the url hash, display only the page number.
-            direction = 'zoom_out'
+            // direction = 'zoom_out'
           } else {
             hash = page + '/' + hotspot // Otherwise, send the page and hotspot to the route.
-            direction = 'zoom_in'
+            // direction = 'zoom_in'
           }
           // You could hook analytics in here
 
@@ -1137,8 +1136,8 @@
             hotspot_max = Number($('#page-' + pp_info.page).attr('data-length')),
             formatState = state.get('format'),
             format = formatState.format,
-            bookend = formatState.bookend,
             leaf_to
+          // var bookend = formatState.bookend
           // console.log('starting',pp_info.hotspot, states.lastHotspot)
 
           pp_info.page = pp_info.page || 1 // If there's no page, go to the first page
@@ -1186,8 +1185,9 @@
     read: function (page, hotspot, transitionDuration) {
       // TODO, this function currently does too much
       // It should be broken out
-      var css
-      var exiting_class, entering_class
+      // var css
+      // var exiting_class
+      // var entering_class
       var $page_container = $('#page-container-' + page)
 
       // Make the current page visible if it isn't
@@ -1220,7 +1220,7 @@
   // All the functions to handle zooming from panels or hotspots
   var zooming = {
     toPage: function ($page, transitionDuration) {
-      var page_number = $page.attr('id').split('-')[1] // `page-1` -> "1"
+      // var page_number = $page.attr('id').split('-')[1] // `page-1` -> "1"
       // Reset zoom to full page view
       var page_css = helpers.setTransitionCss('transform', 'scale(1)', transitionDuration)
       $page.css(page_css)
@@ -1407,9 +1407,9 @@
       facebook: function (e, text, promoImgUrl) {
         var base_url = 'http://www.facebook.com/dialog/feed',
           app_id = '?app_id=' + settings.social.fb_app_id,
-          page_url = '&link=' + social.shareable_url,
-          text = text || settings.social.fb_text,
-          promoImgUrl = promoImgUrl || settings.social.promo_img_url
+          page_url = '&link=' + social.shareable_url
+        text = text || settings.social.fb_text
+        promoImgUrl = promoImgUrl || settings.social.promo_img_url
 
         var description = '&description=' + text,
           redirect = '&redirect_uri=' + social.shareable_url,
@@ -1466,7 +1466,9 @@
           cb()
         })
         .error(function (error) {
-          alert('Error loading config. File is either missing or the JSON is malformed. Try running `config.json` it through jsonlint.com')
+          if (error) {
+            alert('Error loading config. File is either missing or the JSON is malformed. Try running `config.json` it through jsonlint.com: ' + JSON.stringify(error.message))
+          }
         })
     },
     defaults: {
@@ -1535,7 +1537,9 @@
           layout.bakeEndnotes(endnotes)
         })
         .error(function (error) {
-          alert('Error loading data. Data file is either missing or the JSON is malformed. Try running `pages.json` through jsonlint.com')
+          if (error) {
+            alert('Error loading data. Data file is either missing or the JSON is malformed. Try running `pages.json` through jsonlint.com: ' + JSON.stringify(error.message))
+          }
         })
     },
     browserCheck: function () {
