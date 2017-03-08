@@ -258,7 +258,11 @@
 
       $pages.css(auto_width_height)
       $pagesWrapper.css(auto_width_height)
-      $coverHoverMask.css('max-width', '100%')
+      $coverHoverMask.css({
+        'max-width': '100%',
+        'width': '100%',
+        'opacity': 0
+      })
 
       $pages.imagesLoaded().done(function () {
         var $img = $pages.find('img'),
@@ -300,6 +304,7 @@
         // And to the header, whose max shouldn't go below 960
         var header_width = _.max([960, img_width])
         $('#header').css('max-width', header_width + 'px')
+        $coverHoverMask.css('opacity', 1)
         // Invoke the callback when we're all done
         cb()
       })
