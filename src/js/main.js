@@ -509,6 +509,7 @@
       }
     },
     fullScreenChange: function () {
+      var mode
       // You could use this function to listen for fullscreen event changes for analytics
       // Exiting
       if ((document.fullScreenElement && document.fullScreenElement !== null) || (!document.mozFullScreen && !document.webkitIsFullScreen)) {
