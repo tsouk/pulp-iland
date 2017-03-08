@@ -267,6 +267,8 @@
           img_width_wrapper = img_width,
           img_height = $img.height()
 
+        settings.original_img_width = original_img_width
+
         state.setPageFormat()
         var format = state.get('format').format
 
@@ -276,7 +278,11 @@
           if (init.browser[0] == 'Firefox') {
             img_width_wrapper = img_width_wrapper - 1 // Minus one for sub-pixel rendering hack
           }
-          $coverHoverMask.width(original_img_width)
+          if (states.currentPage == 1) {
+            $coverHoverMask.width(original_img_width)
+          } else {
+            $coverHoverMask.css('width', '')
+          }
         }
         // Apply the dimensions from the image to the wrapper
         // Apply a bit of a margin on pages_wrapper to accommodate the gutter
@@ -905,6 +911,13 @@
         routing.router.navigate(newPage.toString(), { replace: true })
         // Keep the dispay up to date
         layout.displayPageNumber(newPage)
+      }
+
+      var $coverHoverMask = $('#page-1 .hover-mask')
+      if (newPage == 1) {
+        $coverHoverMask.width(settings.original_img_width)
+      } else {
+        $coverHoverMask.css('width', '')
       }
       var classes = this.determineTransition(currentPage, newPage, format, bookend)
       if (classes) {
