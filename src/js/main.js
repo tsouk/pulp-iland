@@ -118,7 +118,7 @@
 				// Right arrow
 				else if (code == 39 || code == 'swipeleft'){
 					direction = 'next';
-				} 
+				}
 				// Esc, up, down arrows
 				else if (code == 27 || code == 38 || code == 40 ) {
 					direction = false;
@@ -130,22 +130,22 @@
 		},
 		toggleFullScreen: function(){
 		  if ((document.fullScreenElement && document.fullScreenElement !== null) || (!document.mozFullScreen && !document.webkitIsFullScreen)) {
-		    if (document.documentElement.requestFullScreen) {  
-		      document.documentElement.requestFullScreen();  
-		    } else if (document.documentElement.mozRequestFullScreen) {  
-		      document.documentElement.mozRequestFullScreen();  
-		    } else if (document.documentElement.webkitRequestFullScreen) {  
-		      document.documentElement.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);  
+		    if (document.documentElement.requestFullScreen) {
+		      document.documentElement.requestFullScreen();
+		    } else if (document.documentElement.mozRequestFullScreen) {
+		      document.documentElement.mozRequestFullScreen();
+		    } else if (document.documentElement.webkitRequestFullScreen) {
+		      document.documentElement.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
 		    }
-		  } else {  
-		    if (document.cancelFullScreen) {  
-		      document.cancelFullScreen();  
-		    } else if (document.mozCancelFullScreen) {  
-		      document.mozCancelFullScreen();  
-		    } else if (document.webkitCancelFullScreen) {  
-		      document.webkitCancelFullScreen();  
-		    }  
-		  }  
+		  } else {
+		    if (document.cancelFullScreen) {
+		      document.cancelFullScreen();
+		    } else if (document.mozCancelFullScreen) {
+		      document.mozCancelFullScreen();
+		    } else if (document.webkitCancelFullScreen) {
+		      document.webkitCancelFullScreen();
+		    }
+		  }
 		},
 		sortByNumber: function(a,b) {
 			return a.number - b.number;
@@ -158,7 +158,7 @@
 				$('.page-container.viewing img,.page-container.viewing .paragraph-text').css({'transform': 'translate(0,0)scale(1)','transition-delay': '0'})
 				$('.page-container.viewing .paragraph-text').css({'transform': 'translate(0,0)scale(1)','transition-delay': '0'})
 
-				
+
 			}
 		}
 	}
@@ -284,11 +284,11 @@
 				// Apply the dimensions from the image to the wrapper
 				// Apply a bit of a margin on pages_wrapper to accommodate the gutter
 				var groups = [
-					{el: $pages,        width: img_width}, 
+					{el: $pages,        width: img_width},
 					{el: $pagesWrapper, width: img_width_wrapper}
 				];
 
-				_.each(groups, function(group) { 
+				_.each(groups, function(group) {
 					group.el.css('max-width', (group.width)+'px').css('max-height', img_height+'px');
 				});
 
@@ -303,7 +303,7 @@
 		},
 		implementPageFormat: {
 			bookend: function(){
-				if (states.currentPage == '2') { 
+				if (states.currentPage == '2') {
 					$('#page-container-3').addClass('exit-to-right').addClass('right-page');
 				} else if (states.currentPage != '1') {
 					$('#page-container-'+ (states.currentPage + 1)).addClass('exit-to-right')//.addClass('right-page');
@@ -397,7 +397,7 @@
 			var direction,
 					format = state.get('format').format;
 
-			if (page == 1) { 
+			if (page == 1) {
 				direction = 'prev';
 			} else if (page == states.pages_max || (format == 'double' && page == states.pages_max - 1) ){
 				direction = 'next';
@@ -443,8 +443,8 @@
 			var $body = $('body');
 			var drawer_state = $body.attr('data-side-drawer-state');
 
-			if (drawer_state) { 
-				$body.attr('data-side-drawer-state', 'changing'); 
+			if (drawer_state) {
+				$body.attr('data-side-drawer-state', 'changing');
 			}
 			open = open || $body.attr('data-side-drawer-open') == 'true';
 			$body.attr('data-side-drawer-open', !open);
@@ -519,7 +519,7 @@
 			// Exiting
 		  if ((document.fullScreenElement && document.fullScreenElement !== null) || (!document.mozFullScreen && !document.webkitIsFullScreen)) {
 				mode = 'exit';
-			} 
+			}
 			// Entering
 			else {
 				mode = 'enter';
@@ -569,7 +569,7 @@
 				if (!window.getSelection().focusNode){
 					// Chrome doesn't like this so put it in a try catch
 					try {
-						that.setSelectionRange(0,999); 
+						that.setSelectionRange(0,999);
 					}
 					catch (e){
 						$(that).select();
@@ -604,7 +604,7 @@
 				layout.goToPage.focus(is_new_page, true);
 
 				// Listen for the enter key
-				// But only if there is a value 
+				// But only if there is a value
 				if (page_number && keyCode === 13 ) {
 					// Navigate to that page
 					layout.goToPage.navigate(is_new_page, page_number);
@@ -826,7 +826,7 @@
 			document.addEventListener('webkitfullscreenchange', layout.fullScreenChange, false);
 			document.addEventListener('mozfullscreenchange', layout.fullScreenChange, false);
 			document.addEventListener('fullscreenchange', layout.fullScreenChange, false);
-			document.addEventListener('MSFullscreenChange', layout.fullScreenChange, false);		
+			document.addEventListener('MSFullscreenChange', layout.fullScreenChange, false);
 		}
 	}
 
@@ -860,7 +860,7 @@
 				if (pp_info.hotspot < 0){
 					pp_info.hotspot = '' // Go to panel view
 
-					if (pp_info.page != 1) { 
+					if (pp_info.page != 1) {
 						pp_info.page--;
 						this_page_hotspot_max = Number($('#page-'+pp_info.page).attr('data-length'));
 
@@ -922,7 +922,7 @@
 				// Keep the dispay up to date
 				layout.displayPageNumber(newPage);
 			}
-			var classes = this.determineTransition(currentPage, newPage, format, bookend);			
+			var classes = this.determineTransition(currentPage, newPage, format, bookend);
 			if (classes) {
 				transitions.movePages(currentPage, newPage, classes);
 			}
@@ -975,8 +975,8 @@
 				// Exit both the current and one shown in the url since they are already viewable
 				// If it's the current page it will look nicer if it exits starting from the center.
 				var first_page_exit_classes = '';
-				if (currentPage == 1) { 
-					first_page_exit_classes = ' center-page'; 
+				if (currentPage == 1) {
+					first_page_exit_classes = ' center-page';
 				}
 
 				$('#page-container-'+currentPage).addClass(classes.exiting + first_page_exit_classes);
@@ -994,7 +994,7 @@
 						 .removeClass('exit-to-left')
 						 .removeClass('exit-to-right')
 						 .removeClass('center-page');
-			
+
 			// Set the scale to 1 with no transitionDuration
 			$('#page-container-'+states.lastPage).removeClass('viewing').find('.page').css(helpers.setTransitionCss('transform', 'scale(1)', false));
 			// If we were on a double view, do the same for its next page
@@ -1022,14 +1022,14 @@
 			// The only time that changes would be when we're on a first run
 			// So it has a fall back to `true` in that scenario
 			triggerLazyLoad = triggerLazyLoad || states.firstRun;
-			if (states.firstRun) { 
+			if (states.firstRun) {
 				var show_nav_helpers = false;
 				// If starting on the first page
 				if (settings.requireStartOnFirstPage || page == '1') {
 					page = '1';
 					show_nav_helpers = true;
 				}
-				helpers.saveCurrentStates(page); 
+				helpers.saveCurrentStates(page);
 				transition_duration = false;
 				// Show the nav helpers
 				layout.toggleNavHelpers(show_nav_helpers);
@@ -1087,7 +1087,7 @@
 			routing.router = new routing.Router;
 
 			routing.router.on('route:page', function(page) {
-				// Second arg is lazy load trigger	
+				// Second arg is lazy load trigger
 				routing.setInitRouteChecks(page, true, function(transitionDuration, goToPage){
 					routing.read(goToPage, null, transitionDuration);
 				});
@@ -1159,9 +1159,9 @@
 					pp_info.page = pp_info.page || 1; // If there's no page, go to the first page
 					//Evaluate this as a string in case it's zero and that's meaningfull
 					pp_info.hotspot = pp_info.hotspot || states.lastHotspot || 0; // If there was no hotspot in the hash, see if there was a saved hotspot states, if not start at zero
-					
+
 					states.lastHotspot = pp_info.hotspot;
-					
+
 					// Send it to the appropriate function to transform the new page and hotspot locations
 					if ((format == 'mobile' )) {
 					// if ((format == 'mobile' || settings.panelZoomMode == 'all-devices') && bookend == 'false') { /* DESKTOP_ZOOM_MODE */
@@ -1208,7 +1208,7 @@
 			// Make the current page visible if it isn't
 			if (!$page_container.hasClass('viewing')) $page_container.addClass('viewing');
 			if (states.firstRun) { helpers.saveCurrentStates(page, hotspot); states.firstRun = false; };
-			
+
 			// Make the page variable a number
 			page = +page;
 
@@ -1378,7 +1378,7 @@
 			// Vertical scaler
 			multipliers.push( 1 / (targetHotspotHeight / currentPageHeight) );
 
-			// Always scale by the smaller value 
+			// Always scale by the smaller value
 			multiplier = _.min(multipliers);
 
 			// Figure out which one that was
@@ -1419,7 +1419,7 @@
 
 				var composed_url = social.percentEncode(base_url + tweet_text + ' via @' + via_account + related + counter_url);
 				var window_settings = 'width=500,height=300,top=' + topPos + ',left=' + leftPos + ',scrollbars=no,location=0,statusbars=0,menubars=0,toolbars=0,resizable=0';
-				
+
 				window.open(composed_url, 'Tweet', window_settings);
 			},
 			facebook: function(e, text, promoImgUrl){
@@ -1428,19 +1428,19 @@
 						page_url    = '&link=' + social.shareable_url,
 						text 			  = text || settings.social.fb_text,
 						promoImgUrl = promoImgUrl || settings.social.promo_img_url;
-					
+
 				var description = '&description='+text,
 						redirect    = '&redirect_uri='+social.shareable_url,
 						image       = '&image='+promoImgUrl;
 
 				var facebook_url = base_url + app_id + page_url + description + redirect + image;
-				
+
 				var leftPos = e.pageX - 400,
 						topPos = e.pageY - 350;
 
 				var composed_url = social.percentEncode(facebook_url);
 				var window_settings = 'width=900,height=450,top=' + topPos + ',left=' + leftPos + ',scrollbars=no,location=0,statusbars=0,menubars=0,toolbars=0,resizable=0';
-				
+
 				window.open(composed_url, 'Share', window_settings);
 			},
 			gplus: function(e){
@@ -1450,7 +1450,7 @@
 
 				var composed_url = social.percentEncode(gplus_url);
 				var window_settings = 'width=600,height=600,scrollbars=yes,resizable=yes,toolbar=no,menubar=no';
-				
+
 				window.open(composed_url, 'Share', window_settings);
 			},
 			reddit: function(e){
@@ -1464,7 +1464,7 @@
 
 				window.open(composed_url, 'Share', window_settings);
 			}
-			
+
 		},
 	  percentEncode: function(string){
 			return string.replace(/#/g, '%23').replace(/,/g, '%2c').replace(/ /g, '%20');
@@ -1491,15 +1491,15 @@
 			imgFormat: "jpg",
 			whitelabel: {
 				files: {
-					js: [] 
+					js: []
 				},
 				logo: ""
 			},
-			panelZoomMode: "desktop-hover", 
+			panelZoomMode: "desktop-hover",
 			desktopHoverZoomOptions: {
-				scale: 1.5, 
-				fit: 1, 
-				padding: .25 
+				scale: 1.5,
+				fit: 1,
+				padding: .25
 			},
 			lazyLoadExtent: 6,
 			transitionDuration: 400,
@@ -1508,10 +1508,10 @@
 			drawerTransitionDuration: 500,
 			social: {
 				twitter_text: "THE TEXT TO DISPLAY WHEN SOMEONE CLICKS ON THE TWEET BUTTON",
-				twitter_account: "THE RELATED TWITTER ACCOUNT.", 
+				twitter_account: "THE RELATED TWITTER ACCOUNT.",
 				fb_text: "THE TEXT TO DISPLAY WHEN SOMEONE CLICKS ON THE FACEBOOK SHARE BUTTON",
-				promo_img_url: "PUBLISHED URL FOR IMAGE TO USE AS SOCIAL PROMO", 
-				fb_app_id: "YOUR FB APP ID" 
+				promo_img_url: "PUBLISHED URL FOR IMAGE TO USE AS SOCIAL PROMO",
+				fb_app_id: "YOUR FB APP ID"
 			},
 			requireStartOnFirstPage: false
 		}
@@ -1557,7 +1557,7 @@
 				});
 		},
 		browserCheck: function(){
-	    var ua= navigator.userAgent, tem, 
+	    var ua= navigator.userAgent, tem,
 	    M= ua.match(/(android|opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || [];
 	    if(/trident/i.test(M[1])){
 	        tem=  /\brv[ :]+(\d+)/g.exec(ua) || [];
@@ -1592,7 +1592,7 @@
 			}
 		},
 		touchCheck: function(){
-			return 'ontouchstart' in window // works on most browsers 
+			return 'ontouchstart' in window // works on most browsers
 				|| 'onmsgesturechange' in window; // works on ie10
 		},
 		addMobileClass: function(){
