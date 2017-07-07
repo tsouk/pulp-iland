@@ -1,5 +1,5 @@
 {
-  "pubDate": "Jan 1, 1970",
+  "pubDate": "July 8th 2017",
   "imgFormat": "jpg",
   "whitelabel": {
     "logo": ""
@@ -10,21 +10,21 @@
     "fit": 0.98,
     "padding": 0.38,
     "zoomInDelay": "200ms",
-    "zoomOutDelay": "1500ms",
+    "zoomOutDelay": "500ms",
     "zoomInSpeed": "600ms",
     "zoomOutSpeed": "500ms",
     "mouseFollowSpeed": "350ms"
   },
   "lazyLoadExtent": 6,
-  "transitionDuration": "450ms",
-  "gutterWidth": "2px",
+  "transitionDuration": "2000ms",
+  "gutterWidth": "0px",
   "drawerTransitionDuration": "500ms",
   "social": {
-    "twitter_text": "THE TEXT TO DISPLAY WHEN SOMEONE CLICKS ON THE TWEET BUTTON",
-    "twitter_account": "THE RELATED TWITTER ACCOUNT.",
-    "fb_text": "THE TEXT TO DISPLAY WHEN SOMEONE CLICKS ON THE FACEBOOK SHARE BUTTON",
-    "promo_img_url": "PUBLISHED URL FOR IMAGE TO USE AS SOCIAL PROMO",
-    "fb_app_id": "YOUR FB APP ID"
+    "twitter_text": "iland comic - Chapter 0: Clouds",
+    "twitter_account": "tsoukn and @aboutthislater",
+    "fb_text": "iland comic - Chapter 0: Clouds",
+    "promo_img_url": "https://tsouk.github.io/iland-comic/chapters/0/imgs/pages/page-6.jpg",
+    "fb_app_id": "836888063133831"
   },
   "requireStartOnFirstPage": false
 }

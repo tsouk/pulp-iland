@@ -271,6 +271,9 @@
           img_width_wrapper = img_width,
           img_height = $img.height()
 
+        // console.log($img);
+        // console.log('IMAGE WIDTH ---------:', img_width);
+
         settings.original_img_width = original_img_width
 
         state.setPageFormat()
@@ -1423,17 +1426,20 @@
         window.open(composed_url, 'Tweet', window_settings)
       },
       facebook: function (e, text, promoImgUrl) {
-        var base_url = 'http://www.facebook.com/dialog/feed',
-          app_id = '?app_id=' + settings.social.fb_app_id,
-          page_url = '&link=' + social.shareable_url
-        text = text || settings.social.fb_text
-        promoImgUrl = promoImgUrl || settings.social.promo_img_url
+        //from site:  https://www.facebook.com/dialog/feed?app_id=836888063133831&display=popup&Chapter+0+Blog%3A+Signs+from+Atlantis&link=https://tsouk.github.io/iland-comic/blog/2017/07/08/chapter-zero-clouds.html
+        // with the original pull stuff:  https://www.facebook.com/dialog/feed?app_id=836888063133831&display=popup&display=popup&link=https://tsouk.github.io/iland-comic/&description=iland%20comic%20-%20Chapter%200:%20Clouds&redirect_uri=http://localhost/&image=https://tsouk.github.io/iland-comic/assets/article_images/2017-06-13-chapter-zero-clouds/iodive_wide.jpg
+        var base_url = 'https://www.facebook.com/dialog/feed',
+          app_id = '?app_id=' + settings.social.fb_app_id + '&display=popup',
+          page_url = '&link=' + 'https://tsouk.github.io/iland-comic/chapters/0',//social.shareable_url
+          text = text || settings.social.fb_text,
+          promoImgUrl = promoImgUrl || settings.social.promo_img_url
 
         var description = '&description=' + text,
           redirect = '&redirect_uri=' + social.shareable_url,
           image = '&image=' + promoImgUrl
 
-        var facebook_url = base_url + app_id + page_url + description + redirect + image
+        //var facebook_url = base_url + app_id + page_url + description + redirect + image
+        var facebook_url = base_url + app_id + page_url + image
 
         var leftPos = e.pageX - 400,
           topPos = e.pageY - 350
