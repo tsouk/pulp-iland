@@ -212,6 +212,9 @@ a .header-btn-icon:hover {
   padding: 0 8px;
   text-align: center;
 }
+.header-group.website-link {
+  float: left;
+}
 .header-item .header-text {
   font-size: 1em;
   font-weight: 200;
@@ -472,7 +475,7 @@ body[data-panel-zoom-mode="desktop-hover"] .main-nav-btn-container[data-dir="nex
   text-align: center;
   font-size: 1.4em;
   font-weight: 200;
-  font-family: Helvetica, sans-serif;
+  font-family: Libre Baskerville, serif;
   line-height: 15px;
   color: #969696;
   -webkit-animation: bounce-left-right 2.75s infinite;
@@ -488,7 +491,7 @@ body[data-panel-zoom-mode="desktop-hover"] .main-nav-btn-container[data-dir="nex
   font-size: 1.4em;
   white-space: nowrap;
   margin: 9px 0 10px 0;
-  font-family: Helvetica;
+  font-family: Libre Baskerville;
   color: #000;
 }
 .nav-helper-arrows span {

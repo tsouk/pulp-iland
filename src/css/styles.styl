@@ -2,6 +2,8 @@
 
 json('../../public/config.json')
 
+serif_font = Libre Baskerville
+
 ajam_blue = #2677B9
 max_width = 1324px
 transition_opts = transitionDuration cubic-bezier(0,0,.2,1)
@@ -43,7 +45,7 @@ html, body
 html
 	font-size 16px
 body
-	font 62.5% Libre Baskerville, serif
+	font 62.5% serif_font, serif
 	margin 0
 	background-color bg_layout_color
 a
@@ -192,6 +194,8 @@ a .header-btn-icon:hover
 	.header-item-container
 		padding 0 8px
 		text-align center
+.header-group.website-link
+	float left
 .header-item .header-text
 	font-size 1em
 	font-weight 200
@@ -427,7 +431,7 @@ nav_helper_right = 80px
 	text-align center
 	font-size 1.4em
 	font-weight 200
-	font-family Helvetica, sans-serif
+	font-family serif_font, serif
 	line-height 15px
 	color #969696
 	animation bounce-left-right 2.75s infinite
@@ -436,7 +440,7 @@ nav_helper_right = 80px
 	font-size 1.4em
 	white-space nowrap
 	margin 9px 0 10px 0
-	font-family Helvetica
+	font-family serif_font
 	color #000
 	span
 		padding 1px 4px
