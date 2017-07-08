@@ -490,7 +490,7 @@ body[data-panel-zoom-mode="desktop-hover"] .main-nav-btn-container[data-dir="nex
 .nav-helper-arrows {
   font-size: 1.4em;
   white-space: nowrap;
-  margin: 9px 0 10px 0;
+  margin: 16px 0 16px 0;
   font-family: Libre Baskerville;
   color: #000;
 }
