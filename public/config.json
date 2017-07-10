@@ -1,5 +1,5 @@
 {
-  "pubDate": "July 8th 2017",
+  "pubDate": "",
   "imgFormat": "jpg",
   "whitelabel": {
     "logo": ""
@@ -16,7 +16,7 @@
     "mouseFollowSpeed": "350ms"
   },
   "lazyLoadExtent": 6,
-  "transitionDuration": "2000ms",
+  "transitionDuration": "1000ms",
   "gutterWidth": "0px",
   "drawerTransitionDuration": "500ms",
   "social": {

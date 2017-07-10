@@ -899,7 +899,7 @@
 
         // If that exceeds the number of hotspots on this page, go to the full view of the next page
         if (pp_info.hotspot > hotspot_max) {
-          pp_info = leafing.next.page(pp_info, null, pages_max)
+          pp_info = leafing.next.page(pp_info, null, pages_max);
         }
         return pp_info
       }
@@ -1125,6 +1125,7 @@
     },
     set: {
       fromHotspotClick: function ($hotspot) {
+        //return;
         // Only do this on mobile, this check is sometimes redundant since the btn overlay prevents this in `mobile-only` `panelZoomMode`
         if (state.get('format').format == 'mobile') {
           var page_hotspot = $hotspot.attr('data-hotspot-id').split('-') // `1-1` -> ["1", "1"];
@@ -1168,7 +1169,8 @@
           states.lastHotspot = pp_info.hotspot
 
           // Send it to the appropriate function to transform the new page and hotspot locations
-          if ((format == 'mobile')) {
+          // tsouk: states.currentHotspot means that we only swipe to next hotspot when already at a hotspot
+          if ((states.currentHotspot != '') && (format == 'mobile')) {
           // if ((format == 'mobile' || settings.panelZoomMode == 'all-devices') && bookend == 'false') { /* DESKTOP_ZOOM_MODE */
             leaf_to = 'hotspot'
           } else {
