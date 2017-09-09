@@ -35,7 +35,7 @@ Layout your pages with [Pulp press](https://github.com/ajam/pulp-press) and plac
 * Endnotes for including hyperlinks.
 * Configurable share buttons
 * The final page in the comic takes arbitrary text so you can link out or otherwise give instructions for readers to do when they're done.
-* Configurable logo for whitelabeling. 
+* Configurable logo for whitelabeling.
 * Tested on
 	* Chrome 38
 	* Safari 7.1
@@ -66,6 +66,8 @@ To define your panel regions, we've made a companion interface called [Pulp Pres
 4. When you've saved drawn all your panels on all your pages, click "Download data" and that will give you a nice `pages.json` file which you can place in the Pulp `data/` folder.
 
 Pulp Press has a few other options such as specifying endnotes or alt text for each page image, which can be nice for including the script. "Page text" is abitrary paragraph text you might want to overlay on the page. This text will appear on any page but if you want this text to be clickable, that will only work on the last page. We used this feature to include hyperlinks on the last page of the comic so readers could have a place to go once they've finished.
+
+If you want to disable the gray border between pages you can set `gutterWidth` to `"0px"` in your `config.json` or you can disable it on a per-spread basis by setting `gutterBorder` to `false` on the right-hand page of your spread such as [in the example](public/data/pages.json#L69). This is because the gutter border is drawn as a part of the right image. You might want to add this if you want two pages to go together seamlessly.
 
 #### Comments
 
@@ -102,7 +104,7 @@ Pulp also has a few options that it lets you change, if you so wish. They are al
     "mouseFollowSpeed": "350ms" // How fast to follow the mouse
 	},
 	"lazyLoadExtent": 6, // How many pages behind and ahead do you want to load your images
-	"transitionDuration": "400ms", // In milliseconds, how fast the panels zooms and page turns animate. 
+	"transitionDuration": "400ms", // In milliseconds, how fast the panels zooms and page turns animate.
 	"gutterWidth": 2, // How much space between the two panels in `double` mode. This is the `padding-left` value for `.viewing.right-page`.
 	"drawerTransitionDuration": "500ms", // In milliseconds, how fast the mobile drawer comes in and out.
 	"social": {

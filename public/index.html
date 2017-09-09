@@ -8,7 +8,7 @@
         <!-- YOU CAN ADD .ICO ICONS HERE -->
       <link rel="icon" type="image/x-icon" href=""/>
     <link rel="shortcut icon" type="image/x-icon" href=""/>
-    <link rel="apple-touch-icon" href=""/>  
+    <link rel="apple-touch-icon" href=""/>
 
         <title>Pulp | Comic viewer</title>
 
@@ -42,7 +42,7 @@
 
         <meta name="twitter:image:src" content=""> <!-- at least 280px x 150px for Twitter (image must be < 1MB) -->
         <meta name="twitter:domain" content="">
-        
+
         <!-- OPTIONAl -->
         <meta name="twitter:app:name:iphone" content="">
         <meta name="twitter:app:name:ipad" content="">
@@ -172,7 +172,7 @@
     <!-- Endnotes template, split on the first color since that will be our page panel convention -->
     <script type="text/template" id="endnote-template">
       <li class="endnote"><span class="endnote-number"><%= endnote.number %></span>
-      <%= endnote.page_panel %>: 
+      <%= endnote.page_panel %>:
       <% if (endnote.url) { %>
         <a href="<%= endnote.url %>" target="_blank"><%= endnote.text %></a>
       <% } else { %>
@@ -184,7 +184,7 @@
 
     <!-- Page template -->
     <script type="text/template" id="page-template">
-      <div id="page-container-<%= number %>"  class="page-container">
+      <div id="page-container-<%= number %>"  class="page-container<%= typeof gutterBorder !== 'undefined' && gutterBorder === false ? ' no-gutter-border' : '' %>">
         <div class="page-mask">
           <div class="page" id="page-<%= number %>" data-length="<% print(hotspots.length) %>" >
             <% for (var i = 0; i < hotspots.length; i++ ) {%>

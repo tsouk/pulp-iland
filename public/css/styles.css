@@ -947,6 +947,9 @@ body[data-format="double"] .page-container.viewing.right-page:after {
   z-index: -1;
   background: url("../imgs/assets/border.png") repeat-y 1px top #fff;
 }
+body[data-format="double"] .page-container.viewing.right-page.no-gutter-border:after {
+  background: #fff;
+}
 body[data-format="mobile"] #btns {
   visibility: hidden;
 }
