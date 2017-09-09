@@ -100,6 +100,17 @@ html:-moz-full-screen
 		transition opacity 100ms linear
 		z-index 9999
 		opacity 0
+		&:before
+			background-color #fff
+			width 200%
+			content ' '
+			top 0
+			height 100%
+			position absolute
+			display block
+			transform translate(-25%, 0)
+			pointer-events none
+			z-index -1
 		&:hover
 			opacity 1
 	#desktop-drawer-container,#footer
@@ -116,6 +127,17 @@ html:-webkit-full-screen
 		transition opacity 100ms linear
 		opacity 0
 		z-index 9999
+		&:before
+			background-color #fff
+			width 200%
+			content ' '
+			top 0
+			height 100%
+			position absolute
+			display block
+			transform translate(-25%, 0)
+			pointer-events none
+			z-index -1
 		&:hover
 			opacity 1
 	#desktop-drawer-container,#footer
@@ -132,6 +154,17 @@ html:-fullscreen
 		transition opacity 100ms linear
 		opacity 0
 		z-index 9999
+		&:before
+			background-color #fff
+			width 200%
+			content ' '
+			top 0
+			height 100%
+			position absolute
+			display block
+			transform translate(-25%, 0)
+			pointer-events none
+			z-index -1
 		&:hover
 			opacity 1
 	#desktop-drawer-container,#footer
@@ -148,6 +181,17 @@ html:-ms-fullscreen
 		transition opacity 100ms linear
 		opacity 0
 		z-index 9999
+		&:before
+			background-color #fff
+			width 200%
+			content ' '
+			top 0
+			height 100%
+			position absolute
+			display block
+			transform translate(-25%, 0)
+			pointer-events none
+			z-index -1
 		&:hover
 			opacity 1
 	#desktop-drawer-container,#footer

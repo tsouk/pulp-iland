@@ -103,6 +103,22 @@ html:-moz-full-screen #header {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
 }
+html:-moz-full-screen #header:before {
+  background-color: #fff;
+  width: 200%;
+  content: ' ';
+  top: 0;
+  height: 100%;
+  position: absolute;
+  display: block;
+  -webkit-transform: translate(-25%, 0);
+  -moz-transform: translate(-25%, 0);
+  -o-transform: translate(-25%, 0);
+  -ms-transform: translate(-25%, 0);
+  transform: translate(-25%, 0);
+  pointer-events: none;
+  z-index: -1;
+}
 html:-moz-full-screen #header:hover {
   opacity: 1;
   -ms-filter: none;
@@ -134,6 +150,22 @@ html:-webkit-full-screen #header {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
   z-index: 9999;
+}
+html:-webkit-full-screen #header:before {
+  background-color: #fff;
+  width: 200%;
+  content: ' ';
+  top: 0;
+  height: 100%;
+  position: absolute;
+  display: block;
+  -webkit-transform: translate(-25%, 0);
+  -moz-transform: translate(-25%, 0);
+  -o-transform: translate(-25%, 0);
+  -ms-transform: translate(-25%, 0);
+  transform: translate(-25%, 0);
+  pointer-events: none;
+  z-index: -1;
 }
 html:-webkit-full-screen #header:hover {
   opacity: 1;
@@ -167,6 +199,22 @@ html:-fullscreen #header {
   filter: alpha(opacity=0);
   z-index: 9999;
 }
+html:-fullscreen #header:before {
+  background-color: #fff;
+  width: 200%;
+  content: ' ';
+  top: 0;
+  height: 100%;
+  position: absolute;
+  display: block;
+  -webkit-transform: translate(-25%, 0);
+  -moz-transform: translate(-25%, 0);
+  -o-transform: translate(-25%, 0);
+  -ms-transform: translate(-25%, 0);
+  transform: translate(-25%, 0);
+  pointer-events: none;
+  z-index: -1;
+}
 html:-fullscreen #header:hover {
   opacity: 1;
   -ms-filter: none;
@@ -198,6 +246,22 @@ html:-ms-fullscreen #header {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
   z-index: 9999;
+}
+html:-ms-fullscreen #header:before {
+  background-color: #fff;
+  width: 200%;
+  content: ' ';
+  top: 0;
+  height: 100%;
+  position: absolute;
+  display: block;
+  -webkit-transform: translate(-25%, 0);
+  -moz-transform: translate(-25%, 0);
+  -o-transform: translate(-25%, 0);
+  -ms-transform: translate(-25%, 0);
+  transform: translate(-25%, 0);
+  pointer-events: none;
+  z-index: -1;
 }
 html:-ms-fullscreen #header:hover {
   opacity: 1;
