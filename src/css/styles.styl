@@ -9,7 +9,7 @@ header_height = 46px
 header_item_height = 28px
 header_padding = 7px
 header_margin = 0px
-	
+
 drawer_width = 66%
 drawer_transition_opts = drawerTransitionDuration cubic-bezier(0,0,.2,1)
 hover_transition_opts = desktopHoverZoomOptions-zoomInSpeed cubic-bezier(0,0,.2,1)
@@ -53,7 +53,7 @@ a:hover
 	text-decoration underline
 /* needed to center contents in IE */
 html:-ms-fullscreen
-	width 100% 
+	width 100%
 
 #main-content-wrapper
 	width 100%
@@ -70,7 +70,7 @@ html:-ms-fullscreen
 .page-container,
 .page,
 .hotspot
-	backface-visibility hidden 
+	backface-visibility hidden
 	// transform-style preserve-3d
 /* end globals */
 
@@ -93,7 +93,15 @@ body[data-state="hotspot"]
 	// max-width max_width*2 + gutterWidth
 html:-moz-full-screen
 	#header
-		display none
+		position fixed
+		top 0
+		right 0
+		transform translate(-25%, 0)
+		transition opacity 100ms linear
+		z-index 9999
+		opacity 0
+		&:hover
+			opacity 1
 	#desktop-drawer-container,#footer
 		display none!important
 	#pages-wrapper
@@ -101,7 +109,15 @@ html:-moz-full-screen
 		height calc(100% - 10px)
 html:-webkit-full-screen
 	#header
-		display none
+		position fixed
+		top 0
+		right 0
+		transform translate(-25%, 0)
+		transition opacity 100ms linear
+		opacity 0
+		z-index 9999
+		&:hover
+			opacity 1
 	#desktop-drawer-container,#footer
 		display none!important
 	#pages-wrapper
@@ -109,16 +125,31 @@ html:-webkit-full-screen
 		height calc(100% - 10px)
 html:-fullscreen
 	#header
-		display none
+		position fixed
+		top 0
+		right 0
+		transform translate(-25%, 0)
+		transition opacity 100ms linear
+		opacity 0
+		z-index 9999
+		&:hover
+			opacity 1
 	#desktop-drawer-container,#footer
 		display none!important
 	#pages-wrapper
 		top 5px
 		height calc(100% - 10px)
 html:-ms-fullscreen
-	width 100%
 	#header
-		display none
+		position fixed
+		top 0
+		right 0
+		transform translate(-25%, 0)
+		transition opacity 100ms linear
+		opacity 0
+		z-index 9999
+		&:hover
+			opacity 1
 	#desktop-drawer-container,#footer
 		display none!important
 	#pages-wrapper
@@ -206,7 +237,7 @@ a .header-btn-icon:hover
 
 // Disable spinners on number input
 input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button 
+input::-webkit-inner-spin-button
 	appearance none
 	margin 0
 
@@ -287,7 +318,7 @@ input[type="number"]
 	to{
 		opacity 0
 	}
-	
+
 }
 
 .dropdowned:before,
@@ -411,7 +442,7 @@ body[data-panel-zoom-mode="desktop-hover"]
 	img,
 	.paragraph-text
 		transition transform hover_transition_opts
-	
+
 // .main-nav-btn
 // 	background-color #fc0
 // 	opacity .5
@@ -515,7 +546,7 @@ body[data-format="mobile"]
 		font-size 2em
 		text-align center
 		padding 10px 0
-	li:hover 
+	li:hover
 		cursor pointer
 	li[data-which="twitter"]
 		background-color twitter_color
@@ -533,7 +564,7 @@ body[data-format="mobile"]
 		background-color lighten(reddit_color, 15%)
 	li[data-which="gplus"]:hover
 		background-color lighten(gplus_color, 15%)
-		
+
 
 #side-drawer-handle
 	position absolute
@@ -636,8 +667,8 @@ body[data-state="page-change"]
 .page-container
 	left 0
 	visibility hidden
-.page-container, 
-.page, 
+.page-container,
+.page,
 .page-mask,
 .hover-mask
 	position absolute
@@ -909,6 +940,15 @@ body[data-format="double"][data-bookend="true"] .page-container.exit-to-right.ri
 		left 0%
 	}
 }
+// top menu dropdown
+@keyframes dropdown {
+	from{
+		transform translateY(-100%)
+	}
+	to{
+		transform translateY(0%)
+	}
+}
 /* end transitions */
 
 /* H O T S P O T S */
@@ -974,7 +1014,7 @@ body[data-format="mobile"]
 	#pages
 		width 100%
 	.header-group .header-item-container
-		padding 0 4px 0 0 
+		padding 0 4px 0 0
 	.tooltipped-i[data-focus="true"]:before,
 	.tooltipped-i[data-focus="true"]:after
 		display none
