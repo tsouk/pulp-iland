@@ -288,6 +288,7 @@
             $coverHoverMask.css('width', '')
           }
         }
+        console.log('height', img_height)
         // Apply the dimensions from the image to the wrapper
         // Apply a bit of a margin on pages_wrapper to accommodate the gutter
         var groups = [
@@ -1505,7 +1506,7 @@
       },
       lazyLoadExtent: 6,
       transitionDuration: 400,
-      singlePageWidthLimit: 635, // A bit of a magic number here to ensure that we go into mobile mode below this value.
+      singlePageWidthLimit: 500, // A bit of a magic number here to ensure that we go into mobile mode below this value.
       gutterWidth: '2px',
       drawerTransitionDuration: 500,
       social: {
