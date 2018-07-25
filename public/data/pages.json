@@ -90,12 +90,38 @@
     "number": 14,
     "hotspots": [],
     "script_text": "",
+    "page_text": []
+  },
+  {
+    "number": 15,
+    "hotspots": [],
+    "script_text": "",
+    "page_text": []
+  },
+  {
+    "number": 16,
+    "hotspots": [],
+    "script_text": "",
+    "page_text": []
+  },
+  {
+    "number": 17,
+    "hotspots": [],
+    "script_text": "",
+    "page_text": []
+  },
+  {
+    "number": 18,
+    "hotspots": [],
+    "script_text": "",
     "page_text": [
-      "Thank you for reading Clouds, the first chapter of our new graphic novel iland.",
+      "<br><br><br>Thank you for reading Initiate, the second chapter of our new graphic novel iland.",
+      "<strong>Chapter 2: Heavy Feet</strong> is in progress!",
+      "Join our <a href='https://www.facebook.com/ilandcomic/'>facebook page</a> or follow <a href='https://twitter.com/aboutthislater'>Rob</a> and <a href='https://twitter.com/tsoukn'>Nikos</a> on twitter to get the latest updates.",
+      "Until then we'll be writing some <a href='http://www.ilandcomic.co.uk/blog'>articles</a> and sharing <a href='http://www.ilandcomic.co.uk/sketchbook'>sketches</a> with you.",
+      "<br><br><br>",
       "<span class='internal-link' data-destination='endnotes'>Footnotes on this chapter</span>.",
-      "<a href='http://www.ilandcomic.co.uk/'>Back to the website</a>.",
-      "Our next <strong>Chapter: Heavy Feet</strong> is in progress! Join our <a href='https://www.facebook.com/ilandcomic/'>facebook page</a> or follow <a href='https://twitter.com/aboutthislater'>Rob</a> and <a href='https://twitter.com/tsoukn'>Nikos</a> on twitter to get the latest updates.",
-      "Until then we'll be writing some <a href='http://www.ilandcomic.co.uk/blog'>articles</a> and sharing <a href='http://www.ilandcomic.co.uk/sketchbook'>sketches</a> with you."
+      "<a href='http://www.ilandcomic.co.uk/'>Back to the website</a>."
     ]
   }]
 }

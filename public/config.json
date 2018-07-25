@@ -8,7 +8,7 @@
   "desktopHoverZoomOptions": {
     "scale": 1.5,
     "fit": 0.98,
-    "padding": 0.38,
+    "padding": 0,
     "zoomInDelay": "200ms",
     "zoomOutDelay": "500ms",
     "zoomInSpeed": "600ms",
@@ -20,10 +20,10 @@
   "gutterWidth": "0px",
   "drawerTransitionDuration": "500ms",
   "social": {
-    "twitter_text": "iland comic - Chapter 0: Clouds",
+    "twitter_text": "iland comic - Chapter 1: Initiate",
     "twitter_account": "tsoukn and @aboutthislater",
     "fb_text": "iland comic - Chapter 0: Clouds",
-    "promo_img_url": "https://tsouk.github.io/iland-comic/chapters/0/imgs/pages/page-6.jpg",
+    "promo_img_url": "https://tsouk.github.io/iland-comic/chapters/1/imgs/pages/page-3.jpg",
     "fb_app_id": "836888063133831"
   },
   "requireStartOnFirstPage": false
