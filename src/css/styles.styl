@@ -718,7 +718,7 @@ body[data-state="page-change"]
 	position absolute
 	height 100%
 	width 100%
-	transform translate3d(0,0,0)
+	//transform translate3d(0,0,0)
 .page-mask,
 .hover-mask
 	overflow hidden
@@ -726,7 +726,7 @@ body[data-state="page-change"]
 	position relative
 body[data-format="double"][data-bookend="true"]
 	.hover-mask
-		transform translateX(50%) translate3d(0,0,0)
+		transform translateX(50%)// translate3d(0,0,0)
 
 .page-container.viewing
 	visibility visible
@@ -787,20 +787,13 @@ body[data-format="mobile"]//[data-bookend="false"]
 /* end page formatting */
 
 /* T R A N S I T I O N S */
-// body[data-format="double"]
-// 	.exit-to-left,.exit-to-right
-// 		z-index -1
-/* Single */
-// body[data-format="double"]
-// 	.exit-to-left,.exit-to-right
-// 		z-index -1
-body[data-state="page-change"][data-format="double"]
-	.hover-mask
-		transform translate3d(0,0,0) !important
+// body[data-state="page-change"][data-format="double"]
+// 	.hover-mask
+// 		transform translate3d(0,0,0) !important
 body[data-state="page-change"][data-bookend="true"]
 	.page-container.enter-from-left
 		.hover-mask
-			transform translateX(50%) translate3d(0,0,0) !important
+			transform translateX(50%)// translate3d(0,0,0) !important
 .page-container.exit-to-left
 	animation exit-to-left transition_opts
 .page-container.enter-from-left
@@ -1022,13 +1015,13 @@ body[data-format="double"][data-bookend="true"] .page-container.exit-to-right.ri
 #top-mask
 	top 0
 #bottom-mask
-	transform rotateX(180deg) translate3d(0,0,1);
+	transform rotateX(180deg)// translate3d(0,0,1);
 	bottom -1px /* To cover up some small clipping that occurs */
 #left-mask
 	left 0
 #right-mask
 	right 0
-	transform rotateX(180deg) translate3d(0,0,1);
+	transform rotateX(180deg)// translate3d(0,0,1);
 /* end masks */
 
 /* M E D I A  Q U E R I E S */
