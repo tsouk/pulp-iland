@@ -38,7 +38,7 @@ paths.js.all = paths.js.thirdparty.concat([paths.js.main])
 
 // paths.all = [paths.js.main, paths.css.styl, 'index.html', 'imgs/**/*', 'data/pages.json', 'config.json']
 
-var port = argv.port || process.env.PORT || 8000
+var port = argv.port || process.env.PORT || 8080
 
 var server
 gulp.task('serve', function() {
