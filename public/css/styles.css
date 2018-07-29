@@ -168,7 +168,7 @@ html:-ms-fullscreen #pages-wrapper {
 }
 .header-item {
   height: 100%;
-  color: #fff;
+  color: #a7a7a7;
   display: inline-table;
   vertical-align: top;
 }
@@ -199,7 +199,7 @@ html:-ms-fullscreen #pages-wrapper {
   font-size: 1.5em;
 }
 a .header-btn-icon {
-  color: #fff;
+  color: #a7a7a7;
 }
 a .header-btn-icon:hover {
   color: #2677b9;
@@ -515,7 +515,7 @@ body[data-format="mobile"] {
   background-color: #5b5b5b;
 }
 body[data-format="mobile"] .header-item-container.active .header-btn {
-  color: #fff;
+  color: #a7a7a7;
 }
 #side-drawer-container {
   position: absolute;
