@@ -1170,8 +1170,9 @@
           states.lastHotspot = pp_info.hotspot
 
           // Send it to the appropriate function to transform the new page and hotspot locations
+          // tsouk: setting condition to ((states.currentHotspot != '') && (format == 'mobile'))
           // tsouk: states.currentHotspot means that we only swipe to next hotspot when already at a hotspot
-          if ((states.currentHotspot != '') && (format == 'mobile')) {
+          if (format == 'mobile') {
           // if ((format == 'mobile' || settings.panelZoomMode == 'all-devices') && bookend == 'false') { /* DESKTOP_ZOOM_MODE */
             leaf_to = 'hotspot'
           } else {
